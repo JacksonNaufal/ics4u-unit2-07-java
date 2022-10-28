@@ -37,27 +37,33 @@ final class Main {
     */
     public static void main(final String[] args) {
 
-       Biplane biplane = new Biplane();
-       biplane.setSpeed(212);
-       System.out.println(biplane.getSpeed());
+       Bicycle bmx = new Bicycle("Red", 40);
+       System.out.println("Created Bmx bike.\nStatus:\n");
+       bmx.status();
 
-       Boeing boeing = new Boeing();
-       boeing.setSpeed(422);
-       System.out.println(boeing.getSpeed());
+       System.out.println("Set the cadence to 10\n");
+       bmx.accelerate(10);
+       bmx.status();
 
-       int x = 0;
+       System.out.println("\nAccelerate By 15:");
+       bmx.accelerate(15);
+       bmx.status();
 
-       while (x < 4) {
-        boeing.accelerate();
-        System.out.println(boeing.getSpeed());
-        if (boeing.getSpeed() > 5000) {
-            biplane.setSpeed(biplane.getSpeed() * 2);
-        } else {
-            boeing.accelerate();
-        }
-        x++;
-       }
-        System.out.println(biplane.getSpeed());
-        System.out.println("\nDone!");
+       System.out.println("\nRing Bell.");
+       bmx.ringBell();
+
+       Truck bigTruck = new Truck("Grey", "HGC-3456F", 200);
+       System.out.println("Created a Truck. \nStatus:\n");
+       bigTruck.status();
+       
+       System.out.println("\nAccelerating, 10 of power for ten seconds:");
+       bigTruck.accelerate(10,10);
+       System.out.println("New speed: " + bigTruck.getSpeed());
+
+       System.out.println("\nApplyed air pressure of 10:");
+       bigTruck.provideAir(10);
+       System.out.println("New speed: " + bigTruck.getSpeed());
+
+       System.out.println("\nDone!");
     }
 }

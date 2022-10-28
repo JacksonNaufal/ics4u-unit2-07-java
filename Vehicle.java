@@ -20,61 +20,27 @@ public class Vehicle {
     private int speed;
 
     /**
-     * This is the licensePlate.
-     */
-    private String licensePlate;
-
-    /**
     * This is the color.
     */
-    private String color;
+    protected String color;
 
     /**
      * This is the maxSpeed.
      */
-    private int maxSpeed;
-
-    /**
-     * This is the doorNum.
-     */
-    private int doorNum;
+    protected int maxSpeed;
 
     /**
      * This is the Vehicle Constructor.
      *
      * @param color The vehicles color.
-     * @param licensePlate The vehicles license plate.
-     * @param doorNum The vehicles number of doors.
      * @param maxSpeed The vehicles max speed.
      *
      */
     public Vehicle(
         String color,
-        String licensePlate,
-        int doorNum,
         int maxSpeed) {
         this.color = color;
-        this.licensePlate = licensePlate;
-        this.doorNum = doorNum;
         this.maxSpeed = maxSpeed;
-    }
-
-    /**
-     * This returns the licensePlate.
-     *
-     * @return this returns the licensePlate.
-     */
-    public String getLicensePlate() {
-        return this.licensePlate;
-    }
-
-    /**
-     * This sets the licensePlate.
-     *
-     * @param licensePlateNew this is the new variable.
-     */
-    public void setLicensePlate(String licensePlateNew) {
-        this.licensePlate = licensePlateNew;
     }
 
     /**
@@ -95,15 +61,9 @@ public class Vehicle {
         this.color = setColorNew;
     }
 
-    /**
-     * This gets the door number.
-     *
-     * @return this returns the door number.
-     */
-    public int getDoorNum() {
-        return this.doorNum;
+    public void setSpeed(int newSpeed) {
+        this.speed = newSpeed;
     }
-
     /**
      * This gets the speed.
      *
@@ -112,18 +72,10 @@ public class Vehicle {
     public int getSpeed() {
         return this.speed;
     }
-
-    /**
-     * This sets the status.
-     */
-    public void status() {
-        System.out.println(" ---> Speed: " + this.speed);
-        System.out.println(" ---> MaxSpeed: " + this.maxSpeed);
-        System.out.println(" ---> Number Of Doors " + this.doorNum);
-        System.out.println(" ---> License Plate: " + this.licensePlate);
-        System.out.println(" ---> Color: " + this.color);
+    
+    public int getMaxSpeed() {
+       return this.maxSpeed;
     }
-
     /**
      * Acceleration function
      * This calculates the acceleration speed.
