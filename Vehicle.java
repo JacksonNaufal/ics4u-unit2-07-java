@@ -15,17 +15,17 @@
 public class Vehicle {
 
     /**
-     * This is the speed.
+     * This is the color.
      */
-    private int color;
+    private String color;
 
     /**
-    * This is the color.
+    * This is the maxSpeed.
     */
-    private String maxSpeed;
+    private int maxSpeed;
 
     /**
-     * This is the maxSpeed.
+     * This is the speed.
      */
     private int speed;
 
