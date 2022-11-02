@@ -13,39 +13,56 @@
  */
 
 public class Bicycle extends Vehicle {
-
-    private int cadence = 0;
-
-    public Bicycle(String color, int maxSpeed) {
-            super(color, maxSpeed);
-    }
     /**
-     * This sets the licensePlate.
-     *
-     * @param newSpeed this is the new variable.
+     * This is the cadence.
      */
-    public void accelerate() {
-        super.setSpeed(getSpeed() * 2);
+    private int cadence;
+
+    /**
+     * This is the constructor for Bicycle.
+     *
+     * @param color this is the color.
+     * @param maxSpeed this is the maxSpeed.
+     *
+     */
+    public Bicycle(String color, int maxSpeed) {
+        super(color, maxSpeed);
     }
 
-    public int getCadence() {
-     return this.cadence;
-    }
-
-    public void ringBell() {
-    System.out.println("\nDing ding!");
-    }
-
+    /**
+     * This sets the appliedPower.
+     *
+     * @param appliedPower this is the new variable.
+     */
     public void accelerate(int appliedPower) {
-        super.setSpeed(super.getSpeed() * 2);
+        this.cadence = this.cadence + appliedPower;
+        super.setSpeed(this.cadence * 2);
     }
 
-    public void status() {
+    /**
+     * This is the cadence.
+     *
+     * @return this returns the cadence.
+     */
+    public int getCadence() {
+        return this.cadence;
+    }
 
+    /**
+     * This is the ringbell.
+     */
+    public void ringBell() {
+        System.out.println("Ding ding!");
+    }
+
+    /**
+     * This is the status function.
+     */
+    public void status() {
         System.out.println(" ---> Speed: " + super.getSpeed());
         System.out.println(" ---> MaxSpeed: " + super.getMaxSpeed());
-        System.out.println(" ---> licensePlate: " + this.getCadence());
         System.out.println(" ---> Color: " + super.getColor());
+        System.out.println(" ---> Cadence: " + this.getCadence());
     }
 }
 

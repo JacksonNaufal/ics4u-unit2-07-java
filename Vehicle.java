@@ -17,17 +17,17 @@ public class Vehicle {
     /**
      * This is the speed.
      */
-    private int speed;
+    private int color;
 
     /**
     * This is the color.
     */
-    protected String color;
+    private String maxSpeed;
 
     /**
      * This is the maxSpeed.
      */
-    protected int maxSpeed;
+    private int speed;
 
     /**
      * This is the Vehicle Constructor.
@@ -61,9 +61,15 @@ public class Vehicle {
         this.color = setColorNew;
     }
 
+    /**
+     * This sets the speed.
+     *
+     * @param newSpeed the new speed.
+     */
     public void setSpeed(int newSpeed) {
         this.speed = newSpeed;
     }
+
     /**
      * This gets the speed.
      *
@@ -72,9 +78,14 @@ public class Vehicle {
     public int getSpeed() {
         return this.speed;
     }
-    
+
+    /**
+     * This gets the max speed.
+     *
+     * @return this returns the max speed.
+     */
     public int getMaxSpeed() {
-       return this.maxSpeed;
+        return this.maxSpeed;
     }
     /**
      * Acceleration function
@@ -84,6 +95,7 @@ public class Vehicle {
      * @param accelerationTime this is the acceleration time.
      *
      */
+
     public void accelerate(int accelerationPower, int accelerationTime) {
         this.speed = (accelerationPower * accelerationTime) + this.speed;
 
