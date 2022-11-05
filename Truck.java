@@ -66,9 +66,7 @@ public class Truck extends Vehicle {
      * This is the status method.
      */
     public void status() {
-        System.out.println(" ---> Speed: " + super.getSpeed());
-        System.out.println(" ---> MaxSpeed: " + super.getMaxSpeed());
-        System.out.println(" ---> Color: " + super.getColor());
+        super.status();
         System.out.println(" ---> licensePlate: " + this.getLicensePlate());
     }
 }
