@@ -20,6 +20,28 @@ public class Vehicle {
     private String color;
 
     /**
+/*
+* This is a program that gets the Vehicle status
+* from Vehicle to carStatus
+*
+* @author  Jackson Naufal
+* @version 1.0
+* @since   2022-10-24
+*/
+
+/**
+ * This is the class for Vehicle.
+ * Make class Vehicle.
+ */
+
+public class Vehicle {
+
+    /**
+     * This is the color.
+     */
+    private String color;
+
+    /**
     * This is the maxSpeed.
     */
     private int maxSpeed;
@@ -38,8 +60,8 @@ public class Vehicle {
      */
     public Vehicle(
         String color,
-        int maxSpeed) {
-        this.color = color;
+        int maxSpeed)
+       { this.color = color;
         this.maxSpeed = maxSpeed;
     }
 
@@ -118,5 +140,14 @@ public class Vehicle {
         if (this.speed < 0) {
             this.speed = 0;
         }
+    }
+
+   /**
+    * This is the status method.
+    */
+    public void status() {
+        System.out.println(" ---> Speed: " + this.getSpeed());
+        System.out.println(" ---> MaxSpeed: " + this.getMaxSpeed());
+        System.out.println(" ---> Color: " + this.getColor());
     }
 }
